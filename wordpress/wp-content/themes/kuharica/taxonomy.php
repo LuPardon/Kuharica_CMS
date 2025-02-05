@@ -33,9 +33,12 @@ $query = new WP_Query($args);
                         <div class="card-body">
                             <h5 class="card-title"><?php the_title(); ?></h5>
                             <p class="card-text"><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
-                            <p><strong>Kategorije:</strong> <?php echo get_the_term_list(get_the_ID(), 'kategorije_hrane', '', ', ', ''); ?></p>
+                            <?php
+                            $preparation_time = get_post_meta(get_the_ID(), 'vrijeme_pripreme', true);
+                            ?>
+                            <p><strong>Vrijeme:</strong> <?php echo $preparation_time ? esc_html($preparation_time) . ' minuta' : '?'; ?></p>
                             <p><strong>Vrste:</strong> <?php echo get_the_term_list(get_the_ID(), 'vrsta_jela', '', ', ', ''); ?></p>
-
+                            <p><strong>Kategorije:</strong> <?php echo get_the_term_list(get_the_ID(), 'kategorije_hrane', '', ', ', ''); ?></p>
                             <?php
                             // Dohvati podatke o ocjenama
                             $total_ratings = get_post_meta(get_the_ID(), 'total_ratings', true) ?: 0;

@@ -107,6 +107,8 @@ function kuhaj_register_cpts()
 }
 add_action('init', 'kuhaj_register_cpts');
 
+
+//metabox za oznaku vegetarijanskog jela
 function kuhaj_add_meta_boxes()
 {
     add_meta_box('vege_meta', 'Vegetarijansko jelo', 'kuhaj_render_vege_meta', 'recepti', 'side', 'default');
@@ -133,6 +135,36 @@ function kuhaj_save_meta_boxes($post_id)
     }
 }
 add_action('save_post', 'kuhaj_save_meta_boxes');
+
+
+//metabox za vrijeme pripreme
+function vrijeme_pripreme_meta_box()
+{
+    add_meta_box('vrijeme_pripreme_meta', 'Vrijeme pripreme', 'vrijeme_pripreme_render__meta', 'recepti', 'side', 'default');
+}
+add_action('add_meta_boxes', 'vrijeme_pripreme_meta_box');
+
+function vrijeme_pripreme_render__meta($post)
+{
+    $value = get_post_meta($post->ID, 'vrijeme_pripreme', true);
+?>
+    <label for="vrijeme_pripreme">
+        Oznaka: Vrijeme pripreme (u minutama)
+        <input type="number" name="vrijeme_pripreme" id="vrijeme_pripreme" value=<?php echo $value; ?>>
+    </label>
+<?php
+}
+
+function vrijeme_pripreme_save_meta_boxes($post_id)
+{
+    if (isset($_POST['vrijeme_pripreme'])) {
+        update_post_meta($post_id, 'vrijeme_pripreme', $_POST['vrijeme_pripreme']);
+    } else {
+        delete_post_meta($post_id, 'vrijeme_pripreme');
+    }
+}
+add_action('save_post', 'vrijeme_pripreme_save_meta_boxes');
+
 
 // funkcionalnost za ocjenjivanje recepata
 function save_user_rating()

@@ -22,6 +22,13 @@
                     <div class="recept-content mb-3">
                         <?php the_content(); ?>
                     </div>
+                    <!-- Vrijeme pripreme -->
+                    <div class="mb-3">
+                        <?php
+                        $preparation_time = get_post_meta(get_the_ID(), 'vrijeme_pripreme', true);
+                        ?>
+                        <p><strong>Vrijeme:</strong> <?php echo $preparation_time ? esc_html($preparation_time) . ' minuta' : '?'; ?></p>
+                    </div>
                 </div>
 
 
