@@ -1,0 +1,193 @@
+/*
+Theme Name: Cooking Blog
+Theme URI: http://localhost/cooking-blog
+Author: Lucija Barišić
+Description: Tema za blog ljubitelja kuhanja.
+Version: 1.0
+*/
+
+
+/* Primjer prilagodbe za manje ekrane */
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 1.2rem;
+    }
+}
+
+.submenu {
+    display: none;
+}
+.menu-item:hover .submenu {
+    display: block;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    /* Svijetlo siva pozadina */
+    color: #333;
+}
+
+header {
+    background: #0acf94;
+    /* Zelena boja */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav.main-menu {
+    background: #333;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav.main-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.2em;
+}
+
+nav.main-menu a:hover {
+    background: #e63946;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.site-title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.site-title h1 a {
+    text-decoration: none;
+    color: #333;
+    font-size: 2em;
+}
+
+.site-title p {
+    color: #777;
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+nav .main-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+nav .main-menu li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav .main-menu li a:hover {
+    color: #e63946;
+}
+
+/* Stiliziranje osnovne forme */
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stiliziranje input i textarea elemenata */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Stiliziranje labela */
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Stiliziranje dugmeta za slanje */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+/* Stiliziranje dugmeta kad je hover */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Stiliziranje poruke uspjeha ili greške */
+form p {
+    font-size: 14px;
+    color: #ff0000;
+    /* crvena za grešku */
+    margin-top: 10px;
+}
+
+/* Stiliziranje poruka uspjeha */
+form p.success {
+    color: #4CAF50;
+    /* zelena za uspjeh */
+}
+
+/* Stiliziranje samog odjeljka kontakt informacija */
+.contact-info {
+    margin-top: 40px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Stiliziranje adrese, emaila i broja telefona */
+.contact-info a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}

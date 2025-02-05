@@ -1,0 +1,60 @@
+/*
+Theme Name: Kuharica
+Theme URI: http://localhost:8080/kuharica/
+Author: Ivica Fadljević
+Author URI: http://ivica.fadljevic.eu
+Description: WordPress tema sa ugrađenim Bootstrapom.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: kuharica
+*/
+
+form {
+    margin-bottom: 20px;
+}
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+form select, form input {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.rating-form {
+    margin-top: 20px;
+}
+
+.rating-form .form-select {
+    display: inline-block;
+    width: auto;
+}
+
+.rating-form .btn-primary {
+    margin-left: 10px;
+}
+.rating-stars {
+    margin-top: 10px;
+    display: inline-block;
+    letter-spacing: 2px;
+}
+
+.rating-stars .filled {
+    color: #FFD700; /* Zlatna boja za popunjene zvjezdice */
+}
+
+.rating-stars .empty {
+    color: #ccc; /* Siva boja za prazne zvjezdice */
+}
+
+
